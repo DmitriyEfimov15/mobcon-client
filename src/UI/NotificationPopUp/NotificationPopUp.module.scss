@@ -1,0 +1,91 @@
+.popupError,
+.popupSuccess {
+    position: fixed;
+    top: -100px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    min-width: 280px;
+    max-width: 90vw;
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.popupError {
+    background-color: #ffe6e6; // светло-красный фон
+    color: #d93025; // тёмно-красный текст
+    border: 1px solid #f5c2c2;
+}
+
+.popupSuccess {
+    background-color: #e6ffed; // светло-зелёный фон (аналог #ffe6e6)
+    color: #1e7e34; // тёмно-зелёный текст (аналог #d93025)
+    border: 1px solid #b2f5bf; // мягкий зелёный бордер
+    .content {
+        strong {
+            font-size: 16px;
+            color: #155724 !important; // глубокий зелёный, более насыщенный
+        }
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            color: #1e7e34 !important; // чуть светлее, читаемый текст
+        }
+    }
+}
+.show {
+    top: 20px;
+    opacity: 1;
+}
+
+.hide {
+    top: -100px;
+    opacity: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+
+    strong {
+        font-size: 16px;
+        color: #b71c1c; // заголовок чуть темнее
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+        color: #d93025 !important;
+    }
+
+    .progressError,
+    .progressSuccess {
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        border-radius: 2px;
+        animation: shrink linear forwards;
+    }
+
+    .progressError {
+        background-color: #ff5c5c; // насыщенный красный
+    }
+
+    .progressSuccess {
+        background-color: #28a745;
+    }
+}
+@keyframes shrink {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}

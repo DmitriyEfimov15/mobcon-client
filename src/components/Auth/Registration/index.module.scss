@@ -1,0 +1,60 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+
+    .preview {
+        width: 65%;
+    }
+
+    .registration__form {
+        width: 35%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+
+        .registration__content {
+            height: 75%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .text__header {
+                color: $text-main;
+                text-align: center;
+                font-size: 52px;
+            }
+
+            .text__subHeader {
+                color: $text-main;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+
+            .form {
+                margin-top: 50px;
+                width: 80%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                .button {
+                    margin-top: 60px;
+                    padding: 16px;
+                }
+
+                .link {
+                    margin-top: 15px;
+                    text-decoration: none;
+                    color: $text-muted;
+
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,130 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+
+    .content {
+        display: grid;
+        width: 70%;
+        height: 80vh;
+        grid-template-columns: 2fr 7fr;
+        grid-template-rows: auto 1fr;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+        padding: 24;
+        @media (max-width: 1028px) {
+            width: 80%;
+        }
+        @media (max-width: 870px) {
+            width: 90%;
+        }
+        .sidebar {
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .main__info {
+            border-top: 1px solid #e5e7eb;
+            border-left: 1px solid #e5e7eb;
+        }
+
+        .navigation {
+            border-left: 1px solid #e5e7eb;
+        }
+
+        .logo__container,
+        .navigation,
+        .sidebar {
+            padding: 10px;
+        }
+
+        .main__info {
+            padding: 24px;
+        }
+    }
+
+    .logo__container {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .navigation {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .cost__button {
+            border-radius: 5px;
+            width: 25%;
+            padding: 8px;
+        }
+
+        .top__menu {
+            width: 100%;
+        }
+    }
+
+    .sidebar {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+
+        .sidebar__title {
+            padding: 10px;
+            font-size: 18px;
+        }
+    }
+
+    .main__info {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        overflow-y: auto;
+
+        .logo__info__container {
+            width: 50%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        h1 {
+            font-size: 28px;
+            margin: 10px 0;
+            span {
+                color: $primary;
+            }
+
+            @media (max-width: 1028px) {
+                font-size: 22px;
+            }
+            @media (max-width: 790px) {
+                font-weight: 20px;
+            }
+        }
+
+        p {
+            margin: 10px 0;
+            color: $text-muted;
+        }
+
+        .button__start {
+            border-radius: 5px;
+            width: 40%;
+            margin-top: 20px;
+        }
+    }
+}

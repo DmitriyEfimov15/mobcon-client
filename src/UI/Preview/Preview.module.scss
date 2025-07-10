@@ -1,0 +1,185 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #F9FAFB;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .phoneFrame {
+    width: 360px;
+    height: 740px;
+    border: 16px solid #000;
+    border-radius: 36px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 24px 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .notch {
+    width: 120px;
+    height: 25px;
+    background: #000;
+    border-radius: 0 0 12px 12px;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .appContent {
+    /* flex-grow: 1; ширина 100% и вертикальный поток */
+    flex: 1;
+    width: 100%;
+    padding-top: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* вертикальное расположение */
+    gap: 12px; /* расстояние между элементами */
+    align-items: center; /* по центру по горизонтали */
+  }
+  
+  .component {
+    position: static; /* убираем абсолют */
+    width: 100%; /* растягиваем по ширине контейнера */
+    max-width: 300px; /* ограничение по максимальной ширине */
+    transform: none; /* убираем трансформации */
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 14px;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    user-select: none;
+    /* остальные стили оставить */
+  }
+  
+  .visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none; /* либо можно добавить лёгкое появление */
+  }
+  
+  .title {
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    padding: 0 12px;
+    color: #222;
+  }
+  
+  .subtitle {
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    padding: 0 12px;
+    color: #444;
+  }
+  
+  .description {
+    font-size: 14px;
+    text-align: center;
+    padding: 0 14px;
+    color: #666;
+    line-height: 1.4;
+  }
+  
+  .card {
+    border: 1.5px solid #CCC;
+    padding: 14px 20px;
+    background: #F5F7FA;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    color: #333;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 12px;
+    cursor: default;
+    user-select: text;
+  
+    strong {
+      color: #0A84FF;
+    }
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 14px 24px;
+    background: #007AFF;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    border-radius: 14px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 122, 255, 0.4);
+    border: none;
+    outline: none;
+    margin-top: 16px;
+    width: 100%;
+  
+    &:hover {
+      background: #005BBB;
+      box-shadow: 0 6px 14px rgba(0, 91, 187, 0.6);
+    }
+  }
+  
+  .input {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 14px;
+    border: 1.8px solid #ccc;
+    outline: none;
+    box-sizing: border-box;
+    color: #111;
+    margin-top: 20px;
+    position: relative;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  
+    &::placeholder {
+      color: #aaa;
+    }
+  
+    &:focus {
+      border-color: #007AFF;
+      box-shadow: 0 0 8px rgba(0, 122, 255, 0.5);
+    }
+
+    &.visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+  }
+  
+  .tabBar {
+    width: 100%;
+    padding: 12px 0;
+    border-top: 1px solid #DDD;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    color: #666;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+
+    &.visible {
+        transform: translateY(0);
+        opacity: 1;
+      }
+  }
+  

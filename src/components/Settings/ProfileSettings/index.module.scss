@@ -1,0 +1,32 @@
+.form {
+    margin-top: 10px;
+    width: 60%;
+
+    :global(.ant-form-item) {
+        margin-bottom: 0px;
+        margin-top: 10px;
+        overflow: visible;
+    }
+}
+.passwordTransition {
+    max-height: 0;
+    // overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.visible {
+    max-height: 100px; // подбери по размеру инпута
+    opacity: 1;
+    transform: translateY(0);
+}
+.button {
+    width: 40%;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.cancelBtn__container {
+    width: 40%;
+}

@@ -1,0 +1,26 @@
+.button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 12px;
+    font-size: 17px;
+    transition: .3s;
+    background: $primary;
+    color: #fff;
+    transition: .3s;
+
+    &:hover {
+        background: $primary-hover;
+    }
+
+    &:disabled {
+        background: #d9d9d9;
+        color: #888;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+}

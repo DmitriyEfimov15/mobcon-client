@@ -1,0 +1,51 @@
+.floating__input__wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  color: $text-main;
+}
+
+.floating__input {
+  width: 100%;
+  padding: 16px 40px 12px 12px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &.active {
+    border-color: #007aff;
+  }
+}
+
+.floating__label {
+  position: absolute;
+  left: 12px;
+  top: 16px;
+  color: #999;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+
+  &.active {
+    top: 2px;
+    font-size: 12px;
+    color: #007aff;
+  }
+}
+
+.password__toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 18px;
+  user-select: none;
+
+  &:hover {
+    color: #007aff;
+  }
+}
