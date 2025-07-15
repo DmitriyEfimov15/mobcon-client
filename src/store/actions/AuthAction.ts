@@ -1,4 +1,4 @@
-import AuthService from "@/services/AuthService";
+import AuthService from "@/core/services/AuthService";
 import { AppDispatch } from "..";
 import axios, { AxiosError } from "axios";
 import { AuthResponse } from "@/types/authResponse";

@@ -2,7 +2,7 @@ import { LazySendRequestToChangePasswordContainer } from "@/containers/Auth/Send
 import { LazyLoginFormContainer } from "@/containers/Auth/Login";
 import { LazyRegistrationFormContainer } from "@/containers/Auth/Registration";
 import { LazyVerifyEmailContainer } from "@/containers/Auth/VerifyEmail";
-import { ALL_PROJECTS_PAGE, CHANGE_EMAIL_PAGE, DASHBORD_PAGE, LOGIN_ROUTE, PROFILE_PAGE, PROJECTS_PAGE, REGISTRATION_ROUTE, RESET_PASSWORD_ROUTE, SEND_REQUEST_TO_CHANGE_PASSWORD_ROUTE, SETTINGS_PAGE, VERIFY_EMAIL_ROUTE } from "@/utils/routes";
+import { ALL_PROJECTS_PAGE, CHANGE_EMAIL_PAGE, DASHBORD_PAGE, LOGIN_ROUTE, PROFILE_PAGE, PROJECT_PAGE, PROJECTS_PAGE, REGISTRATION_ROUTE, RESET_PASSWORD_ROUTE, SEND_REQUEST_TO_CHANGE_PASSWORD_ROUTE, SETTINGS_PAGE, VERIFY_EMAIL_ROUTE } from "@/utils/routes";
 import { Navigate, RouteObject } from "react-router-dom";
 import { LazyResetPasswordContainer } from "@/containers/Auth/ResetPassword";
 import { LazyProjectContainer } from "@/containers/Projects";
@@ -10,6 +10,7 @@ import { LazyDashboardContainer } from "@/containers/Projects/Dashboard";
 import { LazySettingsContainer } from "@/containers/Settings";
 import { LazyProfileSettingsContainer } from "@/containers/Settings/ProfileSettings";
 import { LazyChangeEmailContainer } from "@/containers/Settings/ChangeEmail";
+import { LazyAllProjectsContainer } from "@/containers/Projects/AllProjects";
 
 export const unAuthRoutes: RouteObject[] = [
     {
@@ -61,7 +62,7 @@ export const authRoutes: RouteObject[] = [
             },
             {
                 path: ALL_PROJECTS_PAGE,
-                element: <div>Все проекты</div>
+                element: <LazyAllProjectsContainer/>
             }
         ]
     },
@@ -78,6 +79,10 @@ export const authRoutes: RouteObject[] = [
     {
         path: CHANGE_EMAIL_PAGE,
         element: <LazyChangeEmailContainer />
+    },
+    {
+        path: PROJECT_PAGE,
+        element: <div>Проект</div>
     },
     {
         path: "/*",

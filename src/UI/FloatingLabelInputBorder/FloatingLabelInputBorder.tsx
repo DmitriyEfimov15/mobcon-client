@@ -9,6 +9,7 @@ interface FloatingLabelInputProps {
     type?: string;
     name?: string;
     className?: string;
+    maxLen?: number
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -19,6 +20,7 @@ const FloatingLabelInpuBorder: FC<FloatingLabelInputProps> = ({
     type = "text",
     name,
     className,
+    maxLen
 }) => {
     const [isFocused, setIsFocused] = useState(false);
 
@@ -32,6 +34,7 @@ const FloatingLabelInpuBorder: FC<FloatingLabelInputProps> = ({
         >
             <label className={classes.floating_label}>{label}</label>
             <Input
+                maxLength={maxLen}
                 type={type}
                 name={name}
                 value={value}

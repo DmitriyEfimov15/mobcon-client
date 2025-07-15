@@ -1,5 +1,5 @@
 import VerifyEmail from "@/components/Auth/VerifyEmail/VerifyEmail";
-import { useAppDispatch, useAppSelector } from "@/hooks/reducers";
+import { useAppDispatch, useAppSelector } from "@/core/hooks/reducers";
 import {
     sendActivationCodeChangedEmail,
     verifyChangedEmail,

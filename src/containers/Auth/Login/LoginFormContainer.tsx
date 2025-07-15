@@ -1,5 +1,5 @@
 import LoginForm from "@/components/Auth/Login/LoginForm";
-import { useAppDispatch, useAppSelector } from "@/hooks/reducers";
+import { useAppDispatch, useAppSelector } from "@/core/hooks/reducers";
 import { login } from "@/store/actions/AuthAction";
 import { FC, useEffect, useState } from "react";
 

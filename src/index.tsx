@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import RouteWrapper from "./Router/RouteWrapper";
+import RouteWrapper from "./core/Router/RouteWrapper";
 import { Provider } from "react-redux";
 import { setupStore } from "./store";
 

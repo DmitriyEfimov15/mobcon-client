@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as classes from "./NotificationPopUp.module.scss";
-import { useAppDispatch } from "@/hooks/reducers";
+import { useAppDispatch } from "@/core/hooks/reducers";
 import { authSlice } from "@/store/reducers/AuthReducer";
 
 interface NotificationPopUpProps {

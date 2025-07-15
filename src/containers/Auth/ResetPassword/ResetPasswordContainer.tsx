@@ -1,5 +1,5 @@
 import ResetPassword from "@/components/Auth/ResetPassword/ResetPassword";
-import { useAppDispatch, useAppSelector } from "@/hooks/reducers";
+import { useAppDispatch, useAppSelector } from "@/core/hooks/reducers";
 import { resetPassword } from "@/store/actions/AuthAction";
 import { LOGIN_ROUTE } from "@/utils/routes";
 import { FC, useEffect, useState } from "react";

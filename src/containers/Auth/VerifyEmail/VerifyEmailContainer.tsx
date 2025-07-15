@@ -1,5 +1,5 @@
 import VerifyEmail from "@/components/Auth/VerifyEmail/VerifyEmail";
-import { useAppDispatch, useAppSelector } from "@/hooks/reducers";
+import { useAppDispatch, useAppSelector } from "@/core/hooks/reducers";
 import { verifyEmail } from "@/store/actions/AuthAction";
 import { FC, useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";

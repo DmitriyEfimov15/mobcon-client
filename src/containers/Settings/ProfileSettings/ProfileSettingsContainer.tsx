@@ -4,7 +4,7 @@ import {
     FormPasswordI,
     FormUsernameI,
 } from "@/components/Settings/ProfileSettings/types";
-import { useAppDispatch, useAppSelector } from "@/hooks/reducers";
+import { useAppDispatch, useAppSelector } from "@/core/hooks/reducers";
 import {
     changeEmailRequest,
     changePassword,

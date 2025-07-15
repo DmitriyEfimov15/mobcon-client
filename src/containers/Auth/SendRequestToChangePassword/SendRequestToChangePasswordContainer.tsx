@@ -1,5 +1,5 @@
 import SendRequestToChangePassword from "@/components/Auth/SendRequestToChangePassword/SendRequestToChangePassword";
-import { useAppDispatch, useAppSelector } from "@/hooks/reducers";
+import { useAppDispatch, useAppSelector } from "@/core/hooks/reducers";
 import { sendRequestToResetPassword } from "@/store/actions/AuthAction";
 import { FC, useEffect, useState } from "react";
 

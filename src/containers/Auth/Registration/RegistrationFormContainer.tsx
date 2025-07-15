@@ -1,6 +1,6 @@
 import { FC, use, useEffect, useState } from "react";
 import RegistrationForm from "@/components/Auth/Registration/RegistrationForm";
-import { useAppDispatch, useAppSelector } from "@/hooks/reducers";
+import { useAppDispatch, useAppSelector } from "@/core/hooks/reducers";
 import { registration } from "@/store/actions/AuthAction";
 import { useNavigate } from "react-router-dom";
 import { VERIFY_EMAIL_ROUTE } from "@/utils/routes";

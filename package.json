@@ -45,6 +45,7 @@
     "antd": "^5.26.4",
     "axios": "^1.9.0",
     "classnames": "^2.5.1",
+    "dayjs": "^1.11.13",
     "dotenv-webpack": "^8.1.0",
     "react": "^19.0.0",
     "react-device-detect": "^2.2.3",

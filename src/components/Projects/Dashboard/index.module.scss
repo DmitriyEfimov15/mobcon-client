@@ -12,3 +12,68 @@
     width: 40%;
     margin-top: 20px;
 }
+
+.recentProjects {
+    margin-top: 20px;
+    .recentProjects__title {
+        font-size: 22px;
+        color: #000 !important;
+        font-weight: bold;
+    }
+
+    .project {
+        border: none;
+        padding: 5px;
+        margin: 0;
+    }
+
+    .link {
+        color: $text-muted;
+        font-size: 16px;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    .list {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 50%); // 2 столбца
+            gap: 5px; // отступы между карточками
+            width: 65%;
+        }
+
+        .no__data {
+            width: 50%;
+        }
+    }
+}
+
+.info_block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ecfdf3;
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 55%;
+    padding: 8px 15px;
+
+    .round__block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #04c173;
+        padding: 8px;
+
+        .check__icon {
+            color: #fff;
+        }
+    }
+
+    .info__text {
+        color: #04c173 !important;
+    }
+}
