@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as classes from './FloatingLabelInput.module.scss';
+import classes from './FloatingLabelInput.module.scss';
 import { EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
 import classNames from 'classnames';
 

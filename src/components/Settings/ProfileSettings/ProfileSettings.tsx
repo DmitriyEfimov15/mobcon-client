@@ -3,7 +3,7 @@ import { FC } from "react";
 import { FormEmailI, FormPasswordI, FormUsernameI, ProfileSettingsProps } from "./types";
 import FormItem from "antd/es/form/FormItem";
 import FloatingLabelInpuBorder from "@/UI/FloatingLabelInputBorder/FloatingLabelInputBorder";
-import * as classes from "./index.module.scss";
+import classes from "./index.module.scss";
 import CustomButton from "@/UI/CustomButton/CustomButton";
 import classNames from "classnames";
 import FloatingLabelPasswordInputBorder from "@/UI/FloatingLabelPasswordInputBorder/FloatingLabelPasswordInputBorder";

@@ -26,17 +26,17 @@ const fetchMainBaseQuery =
   async (args, api, extraOptions) => {
     const updatedArgs: string | FetchArgs =
       typeof args === "string"
-        ? `${process.env.API_URL}${basePath}${args.startsWith("/") ? args : `/${args}`}`
+        ? `${import.meta.env.VITE_API_URL}${basePath}${args.startsWith("/") ? args : `/${args}`}`
         : {
             ...args,
-            url: `${process.env.API_URL}${basePath}${args.url.startsWith("/") ? args.url : `/${args.url}`}`,
+            url: `${import.meta.env.VITE_API_URL}${basePath}${args.url.startsWith("/") ? args.url : `/${args.url}`}`,
           };
 
     let result = await baseQuery(updatedArgs, api, extraOptions);
 
     if (result.error && result.error.status === 401) {
       const refreshResponse = await baseQuery(
-        `${process.env.API_URL}/auth/refresh`,
+        `${import.meta.env.VITE_API_URL}/auth/refresh`,
         api,
         extraOptions,
       );

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import * as classes from "./index.module.scss";
+import classes from "./index.module.scss";
 import { FloatingLabelInput } from "@/UI/FloatLabelInput/FloatingLabelInput";
 import CustomButton from "@/UI/CustomButton/CustomButton";
 import { NotificationPopUp } from "@/UI/NotificationPopUp/NotificationPopUp";

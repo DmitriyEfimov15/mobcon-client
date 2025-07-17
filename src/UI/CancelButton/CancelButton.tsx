@@ -1,5 +1,5 @@
 import { FC } from "react";
-import * as classes from './index.module.scss'
+import classes from './index.module.scss'
 import Loader from "../Loader/Loader";
 import classNames from "classnames";
 

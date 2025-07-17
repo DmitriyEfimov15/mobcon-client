@@ -1,5 +1,5 @@
 import { FC } from "react";
-import * as classes from "./index.module.scss";
+import classes from "./index.module.scss";
 import logo from "@/assets/logotextright.jpg";
 import { Menu } from "antd";
 import { projectsPageMenuData } from "@/utils/ProjectsPageMenuData";

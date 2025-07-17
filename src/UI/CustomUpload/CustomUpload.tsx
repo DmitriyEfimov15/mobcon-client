@@ -3,7 +3,7 @@ import { Button, Upload, Image, notification } from "antd";
 import type { UploadProps } from "antd";
 import type { RcFile } from "antd/es/upload/interface";
 import { FC, useEffect, useState } from "react";
-import * as classes from "./index.module.scss";
+import classes from "./index.module.scss";
 
 interface CustomUploadProps {
     initialImageUrl?: string;
@@ -17,7 +17,7 @@ const CustomUpload: FC<CustomUploadProps> = ({
     isEdit,
 }) => {
     const [imageUrl, setImageUrl] = useState<string | null>(
-        initialImageUrl && isEdit ? `${process.env.API_URL}/${initialImageUrl}` : null
+        initialImageUrl && isEdit ? `${import.meta.env.VITE_API_URL}/${initialImageUrl}` : null
     );
     console.log(imageUrl);
     const [api] = notification.useNotification();
