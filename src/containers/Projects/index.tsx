@@ -1,4 +1,4 @@
 import { lazy } from "react";
 
 
-export const LazyProjectContainer = lazy(() => import('./ProjectsContainer'))
+export const LazyProjectsContainer = lazy(() => import('./ProjectsContainer'))
