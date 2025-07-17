@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import * as classes from './Loader.module.scss';
+import classes from './Loader.module.scss';
 
 interface LoaderProps {
   size?: number; // размер в пикселях

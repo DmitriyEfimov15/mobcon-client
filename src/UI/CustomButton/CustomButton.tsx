@@ -1,5 +1,5 @@
 import { FC } from "react";
-import * as classes from "./CustomButton.module.scss";
+import classes from "./CustomButton.module.scss";
 import Loader from "../Loader/Loader";
 
 interface CustomButtonProps

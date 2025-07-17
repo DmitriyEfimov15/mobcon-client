@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { Input } from "antd";
-import * as classes from "./index.module.scss";
+import classes from "./index.module.scss";
 import classNames from "classnames";
 
 interface FloatingLabelPasswordInputBorderProps {

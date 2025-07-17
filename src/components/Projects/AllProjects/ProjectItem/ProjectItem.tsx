@@ -1,7 +1,7 @@
 import ConfirmModal from "@/UI/ConfirmModal/ConfirmModal";
 import ProjectModal from "@/UI/ProjectModal/ProjectModal";
 import { DeleteOutlined, EditOutlined, ToolOutlined } from "@ant-design/icons";
-import * as classes from "./index.module.scss";
+import classes from "./index.module.scss";
 import noIcon from "@/assets/no-icon.jpg";
 import { FC } from "react";
 import { FormInstance } from "antd";
@@ -48,7 +48,7 @@ const ProjectItem: FC<ProjectItemProps> = ({
                     <img
                         src={
                             icon_url
-                                ? `${process.env.API_URL}/${icon_url}`
+                                ? `${import.meta.env.VITE_API_URL}/${icon_url}`
                                 : noIcon
                         }
                         alt="Иконка"

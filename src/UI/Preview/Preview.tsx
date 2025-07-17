@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import * as styles from './Preview.module.scss';
+import styles from './Preview.module.scss';
 
 const elements = [
   { key: 'title', text: 'MobCon', className: styles.title },

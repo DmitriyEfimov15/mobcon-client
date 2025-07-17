@@ -1,5 +1,5 @@
 import { FC } from "react";
-import * as classes from "./index.module.scss";
+import classes from "./index.module.scss";
 import { CloseOutlined } from "@ant-design/icons";
 import { Button, Modal } from "antd";
 import CustomButton from "../CustomButton/CustomButton";

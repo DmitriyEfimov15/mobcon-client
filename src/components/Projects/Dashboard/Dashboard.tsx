@@ -1,6 +1,6 @@
 import { FC } from "react";
 import CustomButton from "@/UI/CustomButton/CustomButton";
-import * as classes from "./index.module.scss";
+import classes from "./index.module.scss";
 import logo from "@/assets/logotextright.jpg";
 import { DashboardProps, FormCreateProject } from "./types";
 import { Empty, List } from "antd";

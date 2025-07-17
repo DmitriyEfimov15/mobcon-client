@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef, useState } from "react";
-import * as classes from "./index.module.scss";
+import classes from "./index.module.scss";
 import { MenuOutlined } from "@ant-design/icons";
 import dayjs, { Dayjs } from "dayjs";
 import noIcon from "@/assets/no-icon.jpg";
@@ -65,7 +65,7 @@ const RecentProjectCard: FC<RecentProjectCardProps> = ({
                     <img
                         src={
                             iconUrl
-                                ? `${process.env.API_URL}/${iconUrl}`
+                                ? `${import.meta.env.VITE_API_URL}/${iconUrl}`
                                 : noIcon
                         }
                         alt="icon"

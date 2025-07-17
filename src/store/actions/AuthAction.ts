@@ -95,7 +95,7 @@ export const checkAuth = () => {
         try {
             dispatch(authSlice.actions.setIsLoading(true));
             const response = await axios.get<AuthResponse>(
-                `${process.env.API_URL}/auth/refresh`,
+                `${import.meta.env.VITE_API_URL}/auth/refresh`,
                 { withCredentials: true },
             );
 
