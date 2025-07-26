@@ -46,7 +46,6 @@ export const registration = (
                 password,
                 username,
             );
-            console.log(response.data)
             const {
                 email: userEmail,
                 username: userName,
@@ -60,7 +59,6 @@ export const registration = (
                 })
             );
         } catch (e) {
-            console.log(e, email)
             dispatch(authSlice.actions.setError('Пользователь с такой почтой уже существует!'));
         } finally {
             dispatch(authSlice.actions.setIsLoading(false));
