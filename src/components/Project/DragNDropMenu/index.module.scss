@@ -1,0 +1,8 @@
+.dragNDrop {
+    z-index: 2;
+    background-color: $background;
+    border-right: 1px solid $text-muted;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

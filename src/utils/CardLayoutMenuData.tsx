@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const cardLayoutMenuData: MenuItem[] = [
     {
-        key: 'project',
+        key: 'projects',
         label: <Link to={DASHBORD_PAGE}>Проекты</Link>,
     },
     {

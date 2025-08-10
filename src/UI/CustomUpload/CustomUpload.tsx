@@ -19,7 +19,7 @@ const CustomUpload: FC<CustomUploadProps> = ({
     const [imageUrl, setImageUrl] = useState<string | null>(
         initialImageUrl && isEdit ? `${import.meta.env.VITE_API_URL}/${initialImageUrl}` : null
     );
-    console.log(imageUrl);
+
     const [api] = notification.useNotification();
     const handleBeforeUpload = (file: RcFile) => {
         const isImage = file.type.startsWith("image/");

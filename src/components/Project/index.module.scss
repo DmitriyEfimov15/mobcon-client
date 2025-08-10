@@ -1,0 +1,47 @@
+.container {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .dragNDrop,
+    .items__settings {
+        z-index: 2;
+        background-color: $background;
+    }
+
+    .dragNDrop {
+        border-right: 1px solid $text-muted;
+        .scale {
+            margin-top: 10px;
+            .slider {
+                width: 50%;
+            }
+        }
+
+        .segment {
+            padding: 10px 10px 15px;
+            border-bottom: 1px solid $text-muted;
+
+            .segment__title {
+                font-size: 18px;
+                color: $text-muted;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .items__settings {
+        border-left: 1px solid $text-muted;
+    }
+
+    .workspace__container {
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $workspace-bg;
+        position: relative;
+    }
+}

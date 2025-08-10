@@ -1,0 +1,45 @@
+.scale {
+    margin-top: 10px;
+    .slider {
+        width: 50%;
+    }
+}
+
+.segment {
+    padding: 10px 10px 15px;
+    border-bottom: 1px solid $text-muted;
+    .title {
+        margin-bottom: 0 !important;
+        margin-left: 10px;
+    }
+    .home__container {
+        .home__icon {
+            font-size: 20px;
+        }
+    }
+
+    .segment__title {
+        font-size: 18px;
+        color: $text-muted;
+        margin-bottom: 10px;
+    }
+
+    .segment__content {
+        :global(.ant-list-items) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        :global(.ant-list-items) > li {
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            :global(.ant-list-items) > li {
+                flex: 0 0 100%;
+            }
+        }
+    }
+}

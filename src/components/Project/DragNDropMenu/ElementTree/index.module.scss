@@ -1,0 +1,58 @@
+.tree {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.elementWrapper {
+    width: 100%;
+}
+
+.element {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: $selected;
+}
+
+.group {
+    background-color: #fafafa;
+    border-radius: 4px;
+}
+
+.groupHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    padding: 6px 12px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+.children {
+    padding-left: 12px;
+}
+
+.icon {
+    font-size: 16px;
+    color: #888;
+}
+
+.rename {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+:global(.ant-collapse-header) {
+    padding: 4px 8px !important;
+}

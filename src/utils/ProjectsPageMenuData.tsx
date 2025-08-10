@@ -1,5 +1,5 @@
 import { AppstoreFilled, InboxOutlined } from '@ant-design/icons'
-import { ALL_PROJECTS_PAGE, DASHBORD_PAGE, SETTINGS_PAGE } from './routes';
+import { ALL_PROJECTS_PAGE, DASHBORD_PAGE } from './routes';
 import { Link } from 'react-router-dom';
 import { MenuItem } from '@/types/utilsTypes/antdTypes';
 
