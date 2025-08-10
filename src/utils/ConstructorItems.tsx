@@ -11,13 +11,15 @@ export const blockGroups: BlockGroup[] = [
                 props: {
                     type: "text",
                     placeholder: "Введите текст",
-                    value: "",
-                    onChange: null,
                     disabled: false,
                     required: false,
                     name: "",
                     style: {},
                 },
+                position: {
+                    x: 0,
+                    y: 0
+                }
             },
             {
                 id: "textarea",
@@ -33,6 +35,10 @@ export const blockGroups: BlockGroup[] = [
                     name: "",
                     style: {},
                 },
+                position: {
+                    x: 0,
+                    y: 0
+                }
             },
             {
                 id: "button",
@@ -45,19 +51,23 @@ export const blockGroups: BlockGroup[] = [
                     type: "button",
                     style: {
                         padding: "12px 20px",
-                        backgroundColor: "#4A90E2",
-                        color: "#ffffff",         
+                        backgroundColor: "#007AFF",
+                        color: "#ffffff",
                         fontSize: "16px",
                         border: "none",
                         borderRadius: "6px",
                         cursor: "pointer",
                         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-                        transition: "background-color 0.3s ease",
                         textAlign: "center",
                         minWidth: "120px",
                         fontWeight: 500,
+                        outline: 'none'
                     },
                 },
+                position: {
+                    x: 0,
+                    y: 0
+                }
             },
             {
                 id: "checkbox",
@@ -69,7 +79,12 @@ export const blockGroups: BlockGroup[] = [
                     name: "",
                     disabled: false,
                     style: {},
+                    label: ''
                 },
+                position: {
+                    x: 0,
+                    y: 0
+                }
             },
             {
                 id: "switch",
@@ -86,6 +101,10 @@ export const blockGroups: BlockGroup[] = [
                     style: {},
                     id: "switch-1",
                     value: "on",
+                },
+                position: {
+                    x: 0,
+                    y: 0
                 }
             },
             {
@@ -104,6 +123,10 @@ export const blockGroups: BlockGroup[] = [
                         { label: "Опция 2", value: "2" },
                     ],
                 },
+                position: {
+                    x: 0,
+                    y: 0
+                }
             },
         ],
     },
@@ -121,6 +144,10 @@ export const blockGroups: BlockGroup[] = [
                         color: "#111827",
                     },
                 },
+                position: {
+                    x: 0,
+                    y: 0
+                }
             },
             {
                 id: "image",
@@ -134,6 +161,10 @@ export const blockGroups: BlockGroup[] = [
                         height: "auto",
                     },
                 },
+                position: {
+                    x: 0,
+                    y: 0
+                }
             },
         ],
     },
@@ -150,6 +181,10 @@ export const blockGroups: BlockGroup[] = [
                     text: "", // текст в центре разделителя
                     plain: false, // простой стиль
                 },
+                position: {
+                    x: 0,
+                    y: 0
+                }
             },
             {
                 id: "grid",
@@ -161,6 +196,10 @@ export const blockGroups: BlockGroup[] = [
                     responsive: false, // адаптивная сетка
                     style: {}, // стили контейнера
                 },
+                position: {
+                    x: 0,
+                    y: 0
+                }
             },
             {
                 id: "group",
@@ -173,6 +212,10 @@ export const blockGroups: BlockGroup[] = [
                     collapsed: false, // начальное состояние
                     style: {}, // кастомные стили
                 },
+                position: {
+                    x: 0,
+                    y: 0
+                }
             },
             {
                 id: "stepper",
@@ -195,6 +238,10 @@ export const blockGroups: BlockGroup[] = [
                     onStepChange: null,
                     clickable: true,
                 },
+                position: {
+                    x: 0,
+                    y: 0
+                }
             },
             {
                 id: "tab",
@@ -212,6 +259,10 @@ export const blockGroups: BlockGroup[] = [
                     destroyInactiveTabPane: false,
                     style: {},
                 },
+                position: {
+                    x: 0,
+                    y: 0
+                }
             },
         ],
     },
@@ -230,6 +281,10 @@ export const blockGroups: BlockGroup[] = [
                     onFinish: null, // callback при завершении таймера
                     style: {},
                 },
+                position: {
+                    x: 0,
+                    y: 0
+                }
             },
             {
                 id: "eventCounter",
@@ -243,6 +298,10 @@ export const blockGroups: BlockGroup[] = [
                     onChange: null, // callback при изменении счётчика
                     style: {},
                 },
+                position: {
+                    x: 0,
+                    y: 0
+                }
             },
             {
                 id: "form",
@@ -269,6 +328,10 @@ export const blockGroups: BlockGroup[] = [
                     validationSchema: null, // можно подключить схему валидации (например, Yup)
                     style: {},
                 },
+                position: {
+                    x: 0,
+                    y: 0
+                }
             },
             // {
             //     id: "submit",

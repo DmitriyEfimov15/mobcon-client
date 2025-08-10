@@ -1,85 +1,56 @@
-import { Flex, InputNumber, List, Select, Slider, Tooltip } from "antd";
 import { FC } from "react";
 import classes from "./index.module.scss";
 import { DragNDropMenuProps } from "../types";
-import { sizeContants } from "../sizeContants";
-import { blockGroups } from "@/utils/ConstructorItems";
-import DraggableItem from "@/UI/DraggableItem/DraggableItem";
-import { FaHome } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { DASHBORD_PAGE } from "@/utils/routes";
-import classNames from "classnames";
+import ElementList from "./ElementList/ElementList";
+import { Tabs, TabsProps } from "antd";
+import ElementTree from "./ElementTree/ElementTree";
 
 const DragNDropMenu: FC<DragNDropMenuProps> = ({
     scaleValue,
     valueSize,
+    treeContextMenu,
+    isAddGroupModalVisible,
+    handleMenuClick,
+    setTreeMenuContext,
     handleChangeSizeValue,
     onChangeScale,
+    setContextId,
+    handleCloseAddGroupModal,
 }) => {
+    const tabs: TabsProps["items"] = [
+        {
+            key: "1",
+            label: "Элементы",
+            children: (
+                <ElementList
+                    valueSize={valueSize}
+                    scaleValue={scaleValue}
+                    handleChangeSizeValue={handleChangeSizeValue}
+                    onChangeScale={onChangeScale}
+                />
+            ),
+        },
+        {
+            key: "2",
+            label: "Древо элементов",
+            children: (
+                <ElementTree
+                    treeContextMenu={treeContextMenu}
+                    isAddGroupModalVisible={isAddGroupModalVisible}
+                    setTreeMenuContext={setTreeMenuContext}
+                    handleMenuClick={handleMenuClick}
+                    setContextId={setContextId}
+                    handleCloseAddGroupModal={handleCloseAddGroupModal}
+                />
+            ),
+        },
+    ];
     return (
         <div className={classes.dragNDrop}>
-            <div className={classes.segment}>
-                <Flex vertical>
-                    <Flex align="center" className={classes.main__title}>
-                        <Tooltip title='На главную' placement='bottomLeft'>
-                            <Link
-                                className={classes.home__container}
-                                to={DASHBORD_PAGE}
-                            >
-                                <FaHome className={classes.home__icon} />
-                            </Link>
-                        </Tooltip>
-                        <h1
-                            className={classNames(
-                                classes.segment__title,
-                                classes.title
-                            )}
-                        >
-                            Настройки размеров
-                        </h1>
-                    </Flex>
-                    <Select
-                        value={valueSize}
-                        onChange={(value: string) =>
-                            handleChangeSizeValue(value)
-                        }
-                        placeholder="Выберите размер экрана"
-                        className={classes.select}
-                        options={sizeContants}
-                    />
-                    <Flex justify="space-between" className={classes.scale}>
-                        <Slider
-                            min={1}
-                            className={classes.slider}
-                            max={200}
-                            onChange={onChangeScale}
-                            value={
-                                typeof scaleValue === "number" ? scaleValue : 0
-                            }
-                        />
-                        <InputNumber
-                            min={1}
-                            max={200}
-                            value={scaleValue}
-                            onChange={onChangeScale}
-                        />
-                    </Flex>
-                </Flex>
-            </div>
-            <List
-                dataSource={blockGroups}
-                renderItem={(block) => (
-                    <Flex className={classes.segment} vertical>
-                        <p className={classes.segment__title}>{block.group}</p>
-                        <List
-                            dataSource={block.blocks}
-                            className={classes.segment__content}
-                            renderItem={(blockItem) => (
-                                <DraggableItem item={blockItem} />
-                            )}
-                        />
-                    </Flex>
-                )}
+            <Tabs
+                items={tabs}
+                defaultActiveKey="1"
+                tabBarStyle={{ paddingLeft: 10 }}
             />
         </div>
     );

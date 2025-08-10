@@ -14,9 +14,16 @@ const Project: FC<ProjectComponentProps> = ({
     currentHeight,
     workspaceItems,
     scaleValue,
+    treeContextMenu,
+    isAddGroupModalVisible,
+    setTreeMenuContext,
+    handleMove,
     handleDrop,
     handleChangeSizeValue,
     onChangeScale,
+    handleMenuClick,
+    setContextId,
+    handleCloseAddGroupModal,
 }) => {
     const HTML5toTouch = {
         backends: [
@@ -37,8 +44,14 @@ const Project: FC<ProjectComponentProps> = ({
                 <DragNDropMenu
                     scaleValue={scaleValue}
                     valueSize={valueSize}
+                    treeContextMenu={treeContextMenu}
+                    isAddGroupModalVisible={isAddGroupModalVisible}
+                    setTreeMenuContext={setTreeMenuContext}
                     onChangeScale={onChangeScale}
                     handleChangeSizeValue={handleChangeSizeValue}
+                    handleMenuClick={handleMenuClick}
+                    setContextId={setContextId}
+                    handleCloseAddGroupModal={handleCloseAddGroupModal}
                 />
                 <div className={classes.workspace__container}>
                     <div
@@ -50,7 +63,7 @@ const Project: FC<ProjectComponentProps> = ({
                             })`,
                         }}
                     >
-                        <DroppableZone items={workspaceItems} onDrop={handleDrop}/>
+                        <DroppableZone items={workspaceItems} onDrop={handleDrop} onMove={handleMove}/>
                     </div>
                 </div>
                 <div className={classes.items__settings}></div>

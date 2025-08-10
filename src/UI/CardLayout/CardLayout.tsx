@@ -2,7 +2,6 @@ import { FC } from "react";
 import classes from "./index.module.scss";
 import logo from "@/assets/logotextright.jpg";
 import { Menu } from "antd";
-import { projectsPageMenuData } from "@/utils/ProjectsPageMenuData";
 import { Outlet, useLocation } from "react-router-dom";
 import { MenuItem } from "@/types/utilsTypes/antdTypes";
 import { cardLayoutMenuData } from "@/utils/CardLayoutMenuData";

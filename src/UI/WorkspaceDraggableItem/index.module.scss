@@ -1,0 +1,11 @@
+.item {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: border 0.2s;
+  }
+  
+  .selected {
+    border: 1px solid #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  }
+  

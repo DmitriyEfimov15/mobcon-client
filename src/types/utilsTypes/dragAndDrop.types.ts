@@ -2,9 +2,11 @@ export interface BlockItem {
     id: string;
     type: string;
     label: string;
-    props: ItemProps | Record<string, any>;
+    props?: ItemProps | Record<string, any>;
     icon?: string;
-    position?: { x: number; y: number };
+    position?: PositionI;
+    name?: string;
+    parentId?: string | null;
 }
 
 export interface BlockGroup {
@@ -13,9 +15,12 @@ export interface BlockGroup {
 }
 
 export interface ItemProps {
-    style?: React.CSSProperties
-    text?: string
-    value?: string | number
-    onChange?: (value: string | number) => void
-    onClick?: () => void
+    style?: React.CSSProperties;
+    text?: string;
+    onClick?: () => void;
+}
+
+export interface PositionI {
+    x: number;
+    y: number;
 }
